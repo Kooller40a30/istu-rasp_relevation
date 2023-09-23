@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="CSS.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <nav class="" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item active" aria-current="page">Главная</li>
+                </ol>
+            </nav>
+
+            <div class="row row-auto">
+                <div class="col-sm-3">
+                    <div class="card mb-3">
+                        <ul class="list-group list-group-flush" id="myTab" role="tablist">
+                            <li class="list-group-item bg-light" role="presentation">Расписание</li>
+                            <li class="list-group-item" role="presentation">
+                                <button class="nav-link commands" id="group-tab" data-bs-toggle="tab"
+                                    data-bs-target="#group-tab-pane" type="button" role="tab"
+                                    aria-controls="group-tab-pane">Для групп</button>
+                            </li>
+                            <li class="list-group-item" role="presentation">
+                                <button class="nav-link commands" id="teacher-tab" data-bs-toggle="tab"
+                                    data-bs-target="#teacher-tab-pane" type="button" role="tab"
+                                    aria-controls="teacher-tab-pane">Для преподавателей</button>
+                            </li>
+                            <li class="list-group-item" role="presentation">
+                                <button class="nav-link commands" id="room-tab" data-bs-toggle="tab"
+                                    data-bs-target="#room-tab-pane" type="button" role="tab"
+                                    aria-controls="room-tab-pane">Для аудиторий</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-sm-9 tab-content" id="form-content">
+                    
+                    <div class="card tab-pane fade" id="group-tab-pane" role="tabpanel" aria-labelledby="group-tab" tabindex="-1">
+                        <h5 class="card-header">Расписание для групп</h5>
+                        <div class="card-body">
+                            <form method="post" action="http://istu-rasp/groups_faculty" id="faculties">
+                                <input type="hidden" name="_token" value="xs4LspdSTW0zRHPT2XkaFUdju7KuduuoUHAtOdii">
+                                
+                                <div class="row">
+                                    <label for="faculty" class="form-label">Институт/факультет</label>
+                                    <select class="form-select" name="faculty">
+                                        <option disabled="" selected="">Выберите институт/факультет</option>
+                                        <option value="4">Институт «Информатика и вычислительная техника»
+                                        </option>
+                                        <option value="6">Институт «Современные технологии машиностроения,
+                                            автомобилестроения и металлургии»</option>
+                                        <option value="3">Институт международных образовательных программ
+                                        </option>
+                                        <option value="9">Институт строительства и архитектуры имени В.А.
+                                            Шумилова</option>
+                                        <option value="10">Институт цифровой экономики</option>
+                                        <option value="8">Институт энергетики</option>
+                                        <option value="5">Машиностроительный факультет</option>
+                                        <option value="7">Приборостроительный факультет</option>
+                                        <option value="1">Факультет «Математика и естественные науки»
+                                        </option>
+                                    </select>
+                                </div>
+
+                                <div class="row">
+                                    <label class="form-label">Выберите курс</label>
+                                    <select class="form-select" name="course">
+                                        <option disabled="" selected="">Выберите курс</option>
+                                    </select>
+                                </div>
+
+                                <div class="row">
+                                    <label class="form-label">Выберите группу</label>
+                                    <select class="form-select" name="group">
+                                        <option disabled="" selected="">Выберите группу</option>
+                                        <option value="1">Б22-780-1</option>
+                                        <option value="2">Б22-780-2</option>
+                                        <option value="3">Б22-780-3</option>
+                                        <option value="4">Б22-780-4</option>
+                                        <option value="5">Б22-191-1</option>
+                                        <option value="6">Б22-191-2</option>
+                                    </select>
+                                </div>
+
+                                <div class="row">
+                                    <input type="submit" class="btn btn-primary" name="show" value="Показать">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                        <div class="card tab-pane fade" id="teacher-tab-pane" role="tabpanel" aria-labelledby="teacher-tab"
+                            tabindex="-1">
+                            <h5 class="card-header">Расписание для преподавателей</h5>
+                            <div class="card-body">
+                                <form method="post" action="http://istu-rasp/teachers_faculty" id="faculties">
+                                    <input type="hidden" name="_token" value="xs4LspdSTW0zRHPT2XkaFUdju7KuduuoUHAtOdii">
+                                    <div class="row">
+                                        <label for="teacher" class="form-label">Институт/факультет</label>
+                                        <select class="form-select" name="faculty" id="faculty">
+                                            <option disabled="" selected="">Выберите институт/факультет
+                                            </option>
+                                            <option value="4">Институт «Информатика и вычислительная
+                                                техника»</option>
+                                            <option value="6">Институт «Современные технологии
+                                                машиностроения, автомобилестроения и металлургии»</option>
+                                            <option value="3">Институт международных образовательных
+                                                программ</option>
+                                            <option value="12">Институт непрерывного профессионального
+                                                образования</option>
+                                            <option value="11">Институт образовательных технологий</option>
+                                            <option value="9">Институт строительства и архитектуры имени
+                                                В.А. Шумилова</option>
+                                            <option value="10">Институт цифровой экономики</option>
+                                            <option value="8">Институт энергетики</option>
+                                            <option value="5">Машиностроительный факультет</option>
+                                            <option value="7">Приборостроительный факультет</option>
+                                            <option value="1">Факультет «Математика и естественные науки»
+                                            </option>
+                                        </select>
+                                    </div>
+    
+                                    <div class="row">
+                                        <label for="department" class="form-label">Выберите кафедру</label>
+                                        <select class="form-select" name="department">
+                                            <option disabled="" selected="">Выберите кафедру</option>
+                                            <option value="34">Автоматизированные системы обработки
+                                                информации и управления (АСОИУ)</option>
+                                            <option value="23">Автомобили и металлообрабатывающее
+                                                оборудование (АМО)</option>
+                                        </select>
+                                    </div>   
+                                    <div class="row">
+                                        <label for="teacher" class="form-label">Преподаватели</label>
+                                        <select class="form-select" name="teacher" id="teacher">
+                                            <option disabled="" selected="">Выберите преподавателя</option>
+                                            <option value="248">АБАШЕВА ОЛЬГА ВАЛЕРЬЕВНА</option>
+                                            <option value="292">АБАШЕВА ФЛЮРА АХУНЗЯНОВНА</option>
+                                            <option value="97">АБРАМОВ АНДРЕЙ ИВАНОВИЧ</option>
+                                        </select>
+                                    </div>
+    
+                                    <div class="row">
+                                        <input type="submit" class="btn btn-primary" name="show" value="Показать">
+                                    </div>
+                                </form>
+                            </div>                       
+                        </div>
+                    <div class="card tab-pane fade" id="room-tab-pane" role="tabpanel" aria-labelledby="room-tab"
+                        tabindex="-1">
+                        <h5 class="card-header">Расписание по аудиториям</h5>
+                        <div class="card-body">
+                            <form method="post" action="http://istu-rasp/classrooms_faculty" id="faculties">
+                                <div class="row">
+                                    <label for="faculty" class="form-label">Институт/факультет</label>
+                                    <select class="form-select" name="faculty" id="faculty">
+                                        <option disabled="" selected="">Выберите институт/факультет
+                                        </option>
+                                        <option value="4">Институт «Информатика и вычислительная
+                                            техника»</option>
+                                    </select>
+                                </div>
+
+                                <div class="row">
+                                    <label class="form-label">Кафедра</label>
+                                    <select class="form-select" name="department" id="department">
+                                        <option disabled="" selected="">Выберите кафедру</option>
+                                        <option value="34.4">Автоматизированные системы обработки
+                                            информации и управления (АСОИУ)</option>
+                                    </select>
+                                </div>
+
+                                <div class="row">
+                                    <label for="classroom" class="form-label">Выберите аудиторию</label>
+                                    <select class="form-select" name="classroom" id="classroom">
+                                        <option disabled="" selected="">Выберите аудиторию</option>
+                                        <option value="1..">1-1</option>
+                                        <option value="9..">1-105</option>
+                                        <option value="10..">1-106</option>
+                                        <option value="11..">1-118</option>
+                                    </select>
+                                </div>
+
+                                <div class="row">
+                                    <input type="submit" class="btn btn-primary" name="show" value="Показать">
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+</body>
+
+</html>
