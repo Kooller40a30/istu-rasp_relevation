@@ -21,12 +21,13 @@
         <a class="link-animation" href="">Для администратора</a>
     </nav>
     <main class="site-wrapper">
-        <div class="support-container">
-            <a class="logo"></a>
-            <div class="name-container">
-                <a class="name-university" href="https://istu.ru/" target="_blank">ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ ОБРАЗОВАТЕЛЬНОЕ УЧРЕЖДЕНИЕ ВЫСШЕГО ОБРАЗОВАНИЯ</a>
-                <br>
-                <a class="name-university" href="https://istu.ru/" target="_blank">ИЖЕВСКИЙ ГОСУДАРСТВЕННЫЙ ТЕХНИЧЕСКИЙ УНИВЕРСИТЕТ ИМЕНИ М.Т. КАЛАШНИКОВА</a>
+        <div class="container mt-2">
+            <div class="row align-items-center">
+                <div class="col-sm-3 mb-2"><a class="logo" href="https://istu.ru/" target="_blank"></a></div>
+                <div class="col-sm-auto mb-2">
+                    <p class="name-university">ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ ОБРАЗОВАТЕЛЬНОЕ УЧРЕЖДЕНИЕ ВЫСШЕГО ОБРАЗОВАНИЯ</p>
+                    <p class="name-university">ИЖЕВСКИЙ ГОСУДАРСТВЕННЫЙ ТЕХНИЧЕСКИЙ УНИВЕРСИТЕТ ИМЕНИ М.Т. КАЛАШНИКОВА</p>
+                </div>
             </div>
         </div>
         <div class="container">
@@ -36,7 +37,7 @@
 
             <div class="row row-auto">
                 <div class="col-sm-3">
-                    <div class="card mb-3">
+                    <div class="card small-card mb-3">
                         <ul class="list-group list-group-flush" id="myTab" role="tablist">
                             <li class="list-group-item bg-light" role="presentation">Расписание</li>
                             <li class="list-group-item" role="presentation">
@@ -68,7 +69,7 @@
                                 
                                 <div class="row">
                                     <label for="faculty" class="form-label">Выберите институт/факультет</label>
-                                    <select class="form-select" name="faculty">
+                                    <select class="form-select mb-3" name="faculty">
                                         <option disabled="" selected="">Выберите институт/факультет</option>
                                         <option value="4">Институт «Информатика и вычислительная техника»
                                         </option>
@@ -89,14 +90,14 @@
 
                                 <div class="row">
                                     <label class="form-label">Выберите курс</label>
-                                    <select class="form-select" name="course">
+                                    <select class="form-select mb-3" name="course">
                                         <option disabled="" selected="">Выберите курс</option>
                                     </select>
                                 </div>
 
                                 <div class="row">
                                     <label class="form-label">Выберите группу</label>
-                                    <select class="form-select" name="group">
+                                    <select class="form-select mb-3" name="group">
                                         <option disabled="" selected="">Выберите группу</option>
                                         <option value="1">Б22-780-1</option>
                                         <option value="2">Б22-780-2</option>
@@ -122,7 +123,7 @@
                                     <input type="hidden" name="_token" value="xs4LspdSTW0zRHPT2XkaFUdju7KuduuoUHAtOdii">
                                     <div class="row">
                                         <label for="teacher" class="form-label">Выберите институт/факультет</label>
-                                        <select class="form-select" name="faculty" id="faculty">
+                                        <select class="form-select mb-3" name="faculty" id="faculty">
                                             <option disabled="" selected="">Выберите институт/факультет
                                             </option>
                                             <option value="4">Институт «Информатика и вычислительная
@@ -147,7 +148,7 @@
     
                                     <div class="row">
                                         <label for="department" class="form-label">Выберите кафедру</label>
-                                        <select class="form-select" name="department">
+                                        <select class="form-select mb-3" name="department">
                                             <option disabled="" selected="">Выберите кафедру</option>
                                             <option value="34">Автоматизированные системы обработки
                                                 информации и управления (АСОИУ)</option>
@@ -157,7 +158,7 @@
                                     </div>   
                                     <div class="row">
                                         <label for="teacher" class="form-label">Выберите преподавателя</label>
-                                        <select class="form-select" name="teacher" id="teacher">
+                                        <select class="form-select mb-3" name="teacher" id="teacher">
                                             <option disabled="" selected="">Выберите преподавателя</option>
                                             <option value="248">АБАШЕВА ОЛЬГА ВАЛЕРЬЕВНА</option>
                                             <option value="292">АБАШЕВА ФЛЮРА АХУНЗЯНОВНА</option>
@@ -178,7 +179,7 @@
                             <form method="post" action="http://istu-rasp/classrooms_faculty" id="faculties">
                                 <div class="row">
                                     <label for="faculty" class="form-label">Выберите институт/факультет</label>
-                                    <select class="form-select" name="faculty" id="faculty">
+                                    <select class="form-select mb-3" name="faculty" id="faculty">
                                         <option disabled="" selected="">Выберите институт/факультет
                                         </option>
                                         <option value="4">Институт «Информатика и вычислительная
@@ -188,7 +189,7 @@
 
                                 <div class="row">
                                     <label class="form-label">Выберите кафедру</label>
-                                    <select class="form-select" name="department" id="department">
+                                    <select class="form-select mb-3" name="department" id="department">
                                         <option disabled="" selected="">Выберите кафедру</option>
                                         <option value="34.4">Автоматизированные системы обработки
                                             информации и управления (АСОИУ)</option>
@@ -197,7 +198,7 @@
 
                                 <div class="row">
                                     <label for="classroom" class="form-label">Выберите аудиторию</label>
-                                    <select class="form-select" name="classroom" id="classroom">
+                                    <select class="form-select mb-3" name="classroom" id="classroom">
                                         <option disabled="" selected="">Выберите аудиторию</option>
                                         <option value="1..">1-1</option>
                                         <option value="9..">1-105</option>

@@ -26,6 +26,7 @@
     text-decoration: none;
     font: 16px "Open Sans", sans-serif;
     color: #FFF;
+    margin: 5px 10px;
 }
 .support-container{
     display: flex;
