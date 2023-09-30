@@ -21,6 +21,7 @@
     background-color: #e6e6e6;
     display: flex;
     flex-direction: row-reverse;
+    padding-right: 15px;
 }
 .name-university{   
     text-decoration: none;
