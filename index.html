@@ -32,10 +32,7 @@
                 </div>
             </div>
         </div>
-        <div class="container">
-            <nav class="" aria-label="breadcrumb">
-                <ol class="breadcrumb"></ol>
-            </nav>
+        <div class="container mt-3">
 
             <div class="row row-auto">
                 <div class="col-sm-3">
@@ -220,8 +217,32 @@
 
             </div>
         </div>
+
+        <div class="container mt-3">
+            <div style="display: none;" id="result-content">
+                <div class="card tab-panel">         
+                <input type="submit" class="btn btn-primary" name="download" value="Скачать">
+                <div class="row row-auto">
+                    <table class="table mt-2">
+                        <thead>
+                            <th scope="col">В разработке</th>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+            </div>
+        </div> 
+
     </main>
     <footer></footer>
+    <script>
+        $(function() {
+            $('input[type="submit"]').on('click', (event) => {
+                $('#result-content').show();
+                event.preventDefault();
+            });
+        });
+    </script>
 </body>
 
 </html>
